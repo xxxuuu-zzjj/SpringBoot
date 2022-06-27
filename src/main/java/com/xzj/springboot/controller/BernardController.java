@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 
 /**
  * @RestController = @Controller + ResponseBody
- *              所有返回的参数放到 ResponseBody
+ *             所有返回的参数放到 ResponseBody
  */
 @Api(tags = {"01 封装返回类"})
 @RestController
