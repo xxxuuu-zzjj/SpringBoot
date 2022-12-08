@@ -29,14 +29,13 @@ class SpringbootJakartamailApplicationTests {
 
         MimeMessageHelper messageHelper = new MimeMessageHelper(mimeMessage, true);
         //messageHelper.setFrom("antladdie@163.com");           // 设置发件人邮箱（若配置默认邮箱则不用再设置）
-        messageHelper.setTo("185642433@qq.com");            // 设置收件人邮箱
+        messageHelper.setTo("liuyuhui@tartansh.com");            // 设置收件人邮箱
         //messageHelper.setCc("xiaofeng500@qq.com");            // 设置抄报人邮箱（可以不填写）
         //messageHelper.setBcc("575814158@qq.com");             // 设置密送人邮箱（可以不填写）
         messageHelper.setSubject("问题反馈");                  // 设置邮件主题
 
         //获取项目资源根目录 resources/file  并准备资源
         String rootPath = Objects.requireNonNull(SpringbootJakartamailApplicationTests.class.getClassLoader().getResource("file")).getFile();
-        FileSystemResource jpg = new FileSystemResource(new File(rootPath + "/together.jpg"));
         FileSystemResource xls = new FileSystemResource(new File(rootPath + "/bitRun.xls"));
         FileSystemResource xlsx = new FileSystemResource(new File(rootPath + "/production.xlsx"));
         //FileSystemResource mp3 = new FileSystemResource(new File(rootPath + "/mu.mp3"));
@@ -45,7 +44,7 @@ class SpringbootJakartamailApplicationTests {
         //关于附件  资源  HTML 文本的设置
         //设置附件
         //设置一个 图片附件
-        messageHelper.addAttachment(Objects.requireNonNull(jpg.getFilename()), jpg);
+//        messageHelper.addAttachment(Objects.requireNonNull(jpg.getFilename()), jpg);
         //设置一个 excel附件
         messageHelper.addAttachment(Objects.requireNonNull(xls.getFilename()), xls);
         messageHelper.addAttachment(Objects.requireNonNull(xlsx.getFilename()), xlsx);
